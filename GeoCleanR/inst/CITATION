@@ -1,0 +1,13 @@
+bibentry(bibtype = "Manual",
+         textVersion = "Jordan Adamson (2017). GeoCleanR: A Library for Processing Geospatial Data. R package version 0.1.0.",
+         header = "To cite package 'GeoCleanR' in publications use:",
+         key = "GeoCleanR",
+         title = "{GeoCleanR}: A Library for Processing Geospatial Data",
+         author = person(given = "'Jordan",
+                         family = "Adamson'",
+                         role = c("aut", "cre"),
+                         email = "jordan.m.adamson@gmail.com"),
+         year = "2017",
+         month = "8",
+         note = "R package version 0.1.0",
+         url = "https://sites.google.com/a/g.clemson.edu/ja-resources")

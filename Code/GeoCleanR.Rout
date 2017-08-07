@@ -205,3 +205,27 @@ Writing getSmallPolys.Rd
 > ################## 
 > source(paste0(pdir,"Code/PackageMake.R") )
 pdir is required to already be on github
+To https://github.com/Jadamso/GeoCleanR.git
+   62ae84b..8eac112  master -> master
+Installing GeoCleanR
+'/home/Jadamso/lib64/R/bin/R' --no-site-file --no-environ --no-save  \
+  --no-restore --quiet CMD INSTALL  \
+  '/home/Jadamso/Desktop/Packages/GeoCleanR/GeoCleanR'  \
+  --library='/home/Jadamso/R-Libs' --install-tests 
+
+* installing *source* package ‘GeoCleanR’ ...
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (GeoCleanR)
+Reloading installed GeoCleanR
+Error in username %||% getOption("github.user") %||% stop("Unknown username.") : 
+  Unknown username.
+Calls: source ... eval -> eval -> <Anonymous> -> lapply -> FUN -> %||%
+Execution halted

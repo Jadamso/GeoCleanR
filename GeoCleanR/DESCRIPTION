@@ -1,0 +1,23 @@
+Package: GeoCleanR
+Title: A Library for Processing Geospatial Data
+Version: 0.1.0
+Authors@R: 'Jordan Adamson <jordan.m.adamson@gmail.com> [aut, cre]'
+Description: Functions and Packages to Process Geospatial Data in R. See my website <https://sites.google.com/a/g.clemson.edu/ja-resources>. or github <https://github.com/Jadamso>.
+Depends: R (>= 3.4.1)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Published: 2017-08-07
+Date: 2017-08-07
+URL: https://sites.google.com/a/g.clemson.edu/ja-resources
+RoxygenNote: 6.0.1
+Imports: raster,
+    sp,
+    rgeos,
+    rgdal,
+    maptools,
+    spam,
+    spam64,
+    gdalUtils,
+    fields,
+    cleangeo
