@@ -28,3 +28,5 @@ source(paste0(pdir,"Code/PackageMake.R") )
 ## importFrom(data.table, parallel)
 
 ## source("~/Desktop/Packages/GeoCleanR/Code/GeoCleanR.R")
+
+## R CMD BATCH GeoCleanR.R
