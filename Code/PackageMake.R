@@ -32,7 +32,7 @@ devtools::install(packg) ## Works
 
 #install.packages("devtools")
 devtools::install_github( paste0("Jadamso/",packg), subdir=packg)
-citation(packg)
+citation(pack)
     
 
 print("Done")
