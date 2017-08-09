@@ -1,31 +1,29 @@
 #########################
 # RBLOCK 000
 #########################
-# http://r-pkgs.had.co.nz
-
-## use for R-3.2.2 for support on Palmetto Cluster
-#/home/Jadamso/R-3.2.2/bin/R
-# https://cran.r-project.org/web/packages/roxygen2/vignettes/rd.html
+#http://r-pkgs.had.co.nz
+#https://cran.r-project.org/web/packages/roxygen2/vignettes/rd.html
 
 library(devtools)
 library(roxygen2)
 source( "~/Desktop/Common/R_Code/dir.create.safe.R")
+
 #------------------------------------------------------------------
 ##################
 # Author Info
 ################## 
 
 #devtools::session_info()
-authors_at_r <- paste0( "'",
-    person(
+JordanR <- person(
         given = "Jordan",
         family= "Adamson",
         email = "jordan.m.adamson@gmail.com",
-        role  = c("aut", "cre")),
-    "'" )
+        role  = c("aut", "cre"))
+        
+authors_at_r <- paste0( "'", JordanR, "'" )
 
 options(devtools.name="Jordan Adamson", 
-    devtools.desc.author=authors_at_r)
+    devtools.desc.author=JordanR)
 
 #------------------------------------------------------------------
 ##################
@@ -46,26 +44,21 @@ my_description <- list(
     "Published"  = Sys.Date(),
     "Date"       = Sys.Date(),
     "URL"        = URL,
-    "Version"    = Version
+    "Version"    = Version,
+    "Authors@R"  = 'person("Jordan", "Adamson",
+        email="jordan.m.adamson@gmail.com",
+        role=c("aut","cre"))'
 )
-
+options(devtools.desc=my_description)
 #------------------------------------------------------------------
 ##################
-# CHUNK C
-################## 
 # Create Package
-
+################## 
 ## package.skeleton
-## install.packages(sinew)q
-
+## install.packages(sinew)
 
 # license warning goes away with next code block
-
-package.setup.safe(
-    packg,
-    my_description,
-    rstudio=F,
-    check=T)
+package.setup.safe(packg, check=F)
 
 
 rdir    <- paste0(packg, "/R")
@@ -78,18 +71,12 @@ for (i in c(ddir, idir, extdir) ) { dir.create.safe(i) }
 
 #------------------------------------------------------------------
 ##################
-# CHUNK D
+# Citation
 ################## 
 
-## License
-options( devtools.desc.license='MIT + file LICENSE' )
-file.copy("~/Desktop/Common/Packages/LICENSE", paste0(packg,"/LICENSE"), overwrite=T )
-
-
-## Citation
-year <- as.numeric(format(Sys.Date(), "%Y"))
+year  <- as.numeric(format(Sys.Date(), "%Y"))
 month <- as.numeric(format(Sys.Date(), "%m"))
-note <- sprintf("R package version %s", Version)
+note  <- sprintf("R package version %s", Version)
 header <- citHeader( paste0("To cite package '",pack,"' in publications use:") )
 textVersion <- paste0(
     "Jordan Adamson ",
@@ -115,6 +102,13 @@ writeLines(
     paste(format(bibref, "R"),
     collapse = "\n\n"),
     con=paste0(idir, "/CITATION"))
+#------------------------------------------------------------------
+##################
+# License
+################## 
 
-#devtools::check(pkg=packg)
+options( devtools.desc.license='MIT + file LICENSE' )
+devtools::use_mit_license(packg)
+#writeLines( c( paste0("YEAR: ", year), "COPYRIGHT HOLDER: Jordan Adamson"), con=paste0( packg, "/LICENSE") )
 
+package.setup.safe(packg, check=T)
