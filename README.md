@@ -11,3 +11,7 @@ For applications, see my [dissertation](https://sites.google.com/a/g.clemson.edu
     devtools::install_github("Jadamso/GeoCleanR",subdir="GeoCleanR")
     citation("GeoCleanR")
 
+
+## Caveat Emptor
+This is a pre-release to the public and not gauranteed to work correctly with your code and data.
+
