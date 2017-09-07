@@ -1,9 +1,3 @@
-
-#########################
-# Geo Functions and Libraries
-#########################
-
-
 #-------------------------------------------------------------------
 ##################
 # Libraries
@@ -18,11 +12,9 @@ for( i in rfiles) {
 
 # devtools::use_package( i, "Suggests", pkg=pdir)}
 
-
 #install.packages("sf")
 #devtools::install_github("thk686/rgdal2")
 # library(spacetime)
-
 
 #-------------------------------------------------------------------
 ##################
@@ -35,23 +27,20 @@ devtools::use_data(proj.m, proj.w, overwrite=T, pkg=packg)
 
 #-------------------------------------------------------------------
 ##################
-# CHUNK A
-################## 
 # Add Codes
+################## 
 
-
-# Which Codes
 rfile0 <- c(
     "DownloadGeography.R",
     "TRI.R",
     "ExtractClosest.R",
     "getSmallPolys.R",
     "Raster2DF.R",
-    "RasterMisc.R"
+    "RasterMisc.R",
+    "CountyCleaner.R"
 )
 
-codedire <- path.expand("~/Desktop/Common/R_Code/")
-rfiles <- paste0(codedire, rfile0)
+rfiles <- paste0(hmdir, "GeoCleanR/", rfile0)
 
 # Move Code
 file.copy(rfiles, rdir, overwrite=T )

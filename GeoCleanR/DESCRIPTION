@@ -1,6 +1,6 @@
 Package: GeoCleanR
 Title: A Library for Processing Geospatial Data
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: person("Jordan", "Adamson",
         email="jordan.m.adamson@gmail.com",
         role=c("aut","cre"))
@@ -9,8 +9,8 @@ Depends: R (>= 3.4.1)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Published: 2017-08-09
-Date: 2017-08-09
+Published: 2017-09-06
+Date: 2017-09-06
 URL: https://sites.google.com/a/g.clemson.edu/ja-resources
 RoxygenNote: 6.0.1
 Imports: raster,

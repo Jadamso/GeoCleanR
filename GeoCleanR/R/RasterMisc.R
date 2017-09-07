@@ -15,7 +15,8 @@
 #'  
 #' @export
 
-CRAST_fun <- function(SHP, field_name, Base, GDAL=TRUE, cropmask=TRUE){
+CRAST_fun <-  compiler::cmpfun( function(
+    SHP, field_name, Base, GDAL=TRUE, cropmask=TRUE){
 
     if( class(Base)=="character") {
         Base <- raster::raster(Base)
@@ -64,9 +65,7 @@ CRAST_fun <- function(SHP, field_name, Base, GDAL=TRUE, cropmask=TRUE){
 
     ## Return
     Crast
-
-}
-CRAST_fun <- compiler::cmpfun(CRAST_fun)
+})
 
 #-------------------------------------------------------------------
 ##################
