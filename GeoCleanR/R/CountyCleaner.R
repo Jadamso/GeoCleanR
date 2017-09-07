@@ -54,13 +54,12 @@ COUNTIESh <- compiler::cmpfun( function(hyears, ddir) {
 })
 
 
-
 #------------------------------------------------------------------
 ##################
 #' Wrapper Functions for County Shapefiles
 ##################
 #'
-#' @param hyears,myears,mmyears
+#' @param hyears,myears,mmyears vectors of years
 #' @param ddir,rdir directory of shapefiles
 #' 
 #' @return list of county shapefiles

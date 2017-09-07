@@ -35,7 +35,7 @@ pack_up(pdir)
 
 devtools::install(packg) ## Locally Works
 
-devtools::install_github( paste0("Jadamso/",packg), subdir=packg)
+devtools::install_github( paste0("Jadamso/",pack), subdir=pack)
 ## Public Package From Github Fails Often
 
 citation(pack)
