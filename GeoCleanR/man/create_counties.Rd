@@ -11,7 +11,7 @@ create_counties(hyears = c(1980, 1990, 2000), mmyears = 2008:2010,
 \item{ddir, rdir}{directory of shapefiles}
 }
 \value{
-
+list of county shapefiles
 }
 \description{
 Wrapper Functions for County Shapefiles

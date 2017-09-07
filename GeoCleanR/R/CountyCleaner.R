@@ -63,7 +63,7 @@ COUNTIESh <- compiler::cmpfun( function(hyears, ddir) {
 #' @param hyears,myears,mmyears
 #' @param ddir,rdir directory of shapefiles
 #' 
-#' @return
+#' @return list of county shapefiles
 #' 
 # @details
 # @examples
