@@ -13,7 +13,6 @@ pmdir <- path.expand("~/Desktop/Packages/")
 ##################
 # Make 
 ##################
-
 pack  <- "GeoCleanR"
 pdir  <- paste0(pmdir, pack,"/")
 packg <- paste0(pdir, pack)
@@ -32,7 +31,6 @@ pack_up(pdir)
 ##################
 # Install 
 ##################
-
 devtools::install(packg) ## Locally Works
 
 devtools::install_github( paste0("Jadamso/",pack), subdir=pack)
