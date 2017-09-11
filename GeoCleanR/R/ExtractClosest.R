@@ -46,8 +46,7 @@ ExtractClosest <- compiler::cmpfun( function(
 
 	## Coordinates
 	XY <- sp::coordinates(spdf)
-	XY <- lapply(seq_len(nrow(XY)), mc.cores=ncore,
-	    FUN=function(i) XY[i,] )
+	XY <- lapply(seq_len(nrow(XY)), function(i) XY[i,] )
 
 	## Extract Closest Raster Values
 	rast_vals <- parallel::mclapply(XY, mc.cores=ncore,
