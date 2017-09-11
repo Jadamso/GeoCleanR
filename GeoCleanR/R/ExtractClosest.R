@@ -27,11 +27,22 @@
 ExtractClosest <- compiler::cmpfun( function(
     rast,
     spdf,
-    ncore=24) { 
+    ncore=24,
+    setvals=FALSE) { 
     
 	requireNamespace("raster")
 	requireNamespace("parallel")
 	requireNamespace("sp")
+
+    ## Set values
+    if( setvals) {
+        rast@data@values <- values(rast)
+    } else {
+	## Check if Raster has values to extract
+	    try( if(length(rast@data@values)==0) {
+	        message("try rast@data@values <- values(rast)")
+	        stop( "Error: raster values not set")} )
+	}
 
 	## Coordinates
 	XY <- sp::coordinates(spdf)

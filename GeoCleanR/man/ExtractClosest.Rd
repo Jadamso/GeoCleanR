@@ -5,7 +5,7 @@
 \alias{extract_closest}
 \title{Spatial Points/Polygon Extract Closest from Raster}
 \usage{
-ExtractClosest(rast, spdf, ncore = 24)
+ExtractClosest(rast, spdf, ncore = 24, setvals = FALSE)
 
 extract_closest(rast, spdf, ncore = 24, setvals = FALSE)
 }
