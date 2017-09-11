@@ -82,8 +82,8 @@ extract_closest <- compiler::cmpfun( function(
 
     if( length(hhi_na) >0 ){
         hhi_ext0 <- ExtractClosest(hhi0,
-             tCentroids[hhi_na2,], ncore, setvals)
-        hhi_ext[hhi_na1,]  <- hhi_ext0
+             spdf[hhi_na,], ncore, setvals)
+        hhi_ext[hhi_na,]  <- hhi_ext0
     }
     
     return(hhi_ext)
