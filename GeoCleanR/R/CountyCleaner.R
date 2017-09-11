@@ -13,7 +13,6 @@
 #'  
 #' @export
 
-
 COUNTIESm <-  compiler::cmpfun( function(myears, rddir) {
 	mclapply(myears , function(year) {
 		cfile <- paste0("tl_",year,"_us_county")

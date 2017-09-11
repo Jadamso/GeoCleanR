@@ -2,9 +2,9 @@
 % Please edit documentation in R/ExtractClosest.R
 \name{ExtractClosest}
 \alias{ExtractClosest}
-\title{Extract Closest non-NA Raster Values to Spatial Points PARALLEL}
+\title{Spatial Points/Polygon Extract Closest from Raster}
 \usage{
-ExtractClosest(rast, spdf, ncore = 24)
+ExtractClosest(rast, spdf, ncore = 24, setvals = FALSE)
 }
 \arguments{
 \item{rast}{A raster}
@@ -12,16 +12,22 @@ ExtractClosest(rast, spdf, ncore = 24)
 \item{spdf}{A SpatialPoints or SpatialPointsDataFrame}
 
 \item{ncore}{the size of the window used in the neighbourhood calculations}
+
+\item{setvals}{set raster values to extract}
 }
 \value{
 A list with raster values for each spatial point
-
-library(raster)
-spdf <- sp::SpatialPoints( cbind(x=seq(-1,2,by=.1), y=seq(2,-1,by=-.1)) )
-rast <- raster::raster( matrix(runif(100), 10, 10) )
-raster::crs(spdf) <- raster::crs(rast) <-  "+proj=moll +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"
-ExtractClosest(rast, spdf, 1)
 }
 \description{
-Extract Closest non-NA Raster Values to Spatial Points PARALLEL
+Spatial Points/Polygon Extract Closest from Raster
+}
+\details{
+Extract Closest non-NA Raster Values to Spatial Points in parallel
+
+library(raster)
+xy  <- cbind(x=seq(-1,2,by=.1), y=seq(2,-1,by=-.1) )
+spdf <- sp::SpatialPoints( xy )
+rast <- raster::raster( matrix(runif(100), 10, 10) )
+raster::crs(spdf) <- raster::crs(rast) <- "+proj=moll +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"
+ExtractClosest(rast, spdf, 1)
 }
