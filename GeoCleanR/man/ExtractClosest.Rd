@@ -2,9 +2,12 @@
 % Please edit documentation in R/ExtractClosest.R
 \name{ExtractClosest}
 \alias{ExtractClosest}
+\alias{extract_closest}
 \title{Spatial Points/Polygon Extract Closest from Raster}
 \usage{
-ExtractClosest(rast, spdf, ncore = 24, setvals = FALSE)
+ExtractClosest(rast, spdf, ncore = 24)
+
+extract_closest(rast, spdf, ncore = 24, setvals = FALSE)
 }
 \arguments{
 \item{rast}{A raster}
@@ -20,6 +23,8 @@ A list with raster values for each spatial point
 }
 \description{
 Spatial Points/Polygon Extract Closest from Raster
+
+Wrapper for Extract Closest
 }
 \details{
 Extract Closest non-NA Raster Values to Spatial Points in parallel

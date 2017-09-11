@@ -27,26 +27,15 @@
 ExtractClosest <- compiler::cmpfun( function(
     rast,
     spdf,
-    ncore=24,
-    setvals=FALSE) { 
+    ncore=24) { 
     
 	requireNamespace("raster")
 	requireNamespace("parallel")
 	requireNamespace("sp")
 
-    ## Set values
-    if( setvals) {
-        rast@data@values <- values(rast)
-    } else {
-	## Check if Raster has values to extract
-	    try( if(length(rast@data@values)==0) {
-	        message("try rast@data@values <- values(rast)")
-	        stop( "Error: raster values not set")} )
-	}
-
 	## Coordinates
-	XY    <- sp::coordinates(spdf)
-	XY    <- parallel::mclapply(seq_len(nrow(XY)), mc.cores=ncore,
+	XY <- sp::coordinates(spdf)
+	XY <- lapply(seq_len(nrow(XY)), mc.cores=ncore,
 	    FUN=function(i) XY[i,] )
 
 	## Extract Closest Raster Values
@@ -61,3 +50,30 @@ ExtractClosest <- compiler::cmpfun( function(
 	return(unlist(rast_vals))
 })
 
+
+
+#-------------------------------------------------------------------
+##################
+#' Wrapper for Extract Closest
+################## 
+#
+#' @rdname ExtractClosest
+#' @export
+
+extract_closest <- compiler::cmpfun( function(
+    rast,
+    spdf,
+    ncore=24,
+    setvals=FALSE){
+    
+    hhi_ext <- raster::extract(rast, spdf )
+    hhi_na  <- which(is.na(hhi_ext))
+
+    if( length(hhi_na) >0 ){
+        hhi_ext0 <- ExtractClosest(hhi0,
+             tCentroids[hhi_na2,], ncore, setvals)
+        hhi_ext[hhi_na1,]  <- hhi_ext0
+    }
+    
+    return(hhi_ext)
+})    
