@@ -80,7 +80,7 @@ extract_closest <- compiler::cmpfun( function(
     hhi_na  <- which(is.na(hhi_ext))
 
     if( length(hhi_na) >0 ){
-        hhi_ext0 <- ExtractClosest(hhi0,
+        hhi_ext0 <- ExtractClosest(rast,
              spdf[hhi_na,], ncore, setvals)
         hhi_ext[hhi_na,]  <- hhi_ext0
     }
