@@ -24,7 +24,7 @@ COUNTIESm <-  compiler::cmpfun( function(myears, rddir) {
 
 
 #' @rdname COUNTIESm
-#' @details Middle Modern Counties
+#' @details Middle Modern Counties 
 # Also works for COUNTIESm
 #' @export
 COUNTIESmm <-  compiler::cmpfun( function(mmyears, rddir) {
@@ -40,7 +40,7 @@ COUNTIESmm <-  compiler::cmpfun( function(mmyears, rddir) {
 })
 
 #' @rdname COUNTIESm
-#' @details Historical Counties
+#' @details Historical Counties from 1690:2000
 # Also works for COUNTIESm
 #' @export
 COUNTIESh <- compiler::cmpfun( function(hyears, ddir) {

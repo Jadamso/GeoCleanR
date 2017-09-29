@@ -81,9 +81,7 @@ CRAST_fun <-  compiler::cmpfun( function(
 #'  
 #' @export
 
-
-
-agg_fun <- function(i, rast){
+agg_fun <- compiler::cmpfun( function(i, rast){
     if ( i > 1 ){
         xi <- raster::aggregate(rast, i, 
             expand=TRUE, fun=modal, na.rm=TRUE)
@@ -94,5 +92,5 @@ agg_fun <- function(i, rast){
         xi <- NA
     }
     return(xi)
-}
-agg_fun <- compiler::cmpfun(agg_fun)
+})
+

@@ -35,6 +35,7 @@ rfile0 <- c(
     "TRI.R",
     "ExtractClosest.R",
     "getSmallPolys.R",
+    "DF2Raster.R",
     "Raster2DF.R",
     "RasterMisc.R",
     "CountyCleaner.R"

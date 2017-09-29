@@ -21,7 +21,7 @@ layer_list <- function(stack){
     requireNamespace("parallel")
 
    
-    mclapply( 1:raster::nlayers(stack), function(i){
+    parallel::mclapply( 1:raster::nlayers(stack), function(i){
         layer_pts <- as.data.table( 
             raster::rasterToPoints(stack[[i]])
         )
@@ -49,11 +49,12 @@ layer_list <- function(stack){
 #'  
 #' @export
 
-stack2df <- function(Rstack) { 
+stack2df <-  compiler::cmpfun( function(Rstack) { 
     print(dim(Rstack))
     as.data.frame(
         raster::rasterToPoints(Rstack),
         xy=TRUE,
         na.rm=TRUE)
-}
-stack2df <- compiler::cmpfun(stack2df)
+} )
+
+
