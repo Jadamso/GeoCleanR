@@ -17,7 +17,7 @@ DF2stack <- compiler::cmpfun( function(
 
     sp::coordinates(DF) <- ~x+y
     sp::gridded(DF)     <- TRUE
-    DF <- raster::stack(DF[dname])
+    DF <- raster::stack(DF[dfname])
 
     return(DF)
     
