@@ -58,3 +58,8 @@ stack2df <-  compiler::cmpfun( function(Rstack) {
 } )
 
 
+#' rdname stack2df
+#' @export
+Raster2DF <- stack2df
+
+

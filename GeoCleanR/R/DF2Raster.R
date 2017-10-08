@@ -24,6 +24,9 @@ DF2stack <- compiler::cmpfun( function(
 })
 
 
+#' rdname DF2stack
+#' @export
+DF2Raster <- DF2stack
 
 #------------------------------------------------------------------
 ##################
