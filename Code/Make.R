@@ -42,4 +42,6 @@ print("Done")
 
 ## source("~/Desktop/Packages/GeoCleanR/Code/GeoCleanR.R")
 
-## R CMD BATCH Code/GeoCleanR.R && rm GeoCleanR.Rout .RData
+## R CMD BATCH --no-save Code/Make.R && rm Make.Rout
+
+
