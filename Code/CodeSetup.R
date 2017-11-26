@@ -41,7 +41,7 @@ rfile0 <- c(
     "CountyCleaner.R"
 )
 
-rfiles <- paste0(hmdir, "GeoCleanR/", rfile0)
+rfiles <- paste0(hmdir, pack, "/", rfile)
 
 # Move Code
 file.copy(rfiles, rdir, overwrite=T )
