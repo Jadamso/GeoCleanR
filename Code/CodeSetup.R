@@ -30,10 +30,11 @@ devtools::use_data(proj.m, proj.w, overwrite=T, pkg=packg)
 # Add Codes
 ################## 
 
-rfile0 <- c(
+rfile <- c(
     "DownloadGeography.R",
     "TRI.R",
     "ExtractClosest.R",
+    "DYADmaker.R",
     "getSmallPolys.R",
     "DF2Raster.R",
     "Raster2DF.R",
@@ -41,7 +42,7 @@ rfile0 <- c(
     "CountyCleaner.R"
 )
 
-rfiles <- paste0(pdir,"Code/R_Code/")
+rfiles <- paste0(pdir,"Code/R_Code/",rfile)
 
 # Move Code
 file.copy(rfiles, rdir, overwrite=T )
