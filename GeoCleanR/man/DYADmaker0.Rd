@@ -2,16 +2,18 @@
 % Please edit documentation in R/DYADmaker.R
 \name{DYADmaker0}
 \alias{DYADmaker0}
-\title{Make Dyad Skeleton}
+\title{Make Skeleton for Dyadic Panel}
 \usage{
 DYADmaker0(times, dyad_name = c("Political", "Dyad", "Year"))
 }
 \arguments{
-\item{times}{}
+\item{times}{time periods}
+
+\item{dyad_name}{}
 }
 \value{
 An empty list to be filled in DYADmaker1
 }
 \description{
-Make Dyad Skeleton
+Make Skeleton for Dyadic Panel
 }

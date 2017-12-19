@@ -35,6 +35,7 @@ rfile <- c(
     "TRI.R",
     "ExtractClosest.R",
     "DYADmaker.R",
+    "DYADmaker_new.R",
     "getSmallPolys.R",
     "DF2Raster.R",
     "Raster2DF.R",

@@ -6,11 +6,11 @@
 
 #------------------------------------------------------------------
 ##################
-#' Make Dyad Skeleton
+#' Make Skeleton for Dyadic Panel
 ################## 
 #' 
-#' @param times
-#' @param times 
+#' @param times time periods
+#' @param dyad_name  
 #'
 #' @return An empty list to be filled in DYADmaker1
 #' @export
@@ -19,7 +19,7 @@ DYADmaker0 <- compiler::cmpfun( function(
     times,
     dyad_name=c("Political", "Dyad", "Year")){
     
-	dyad <- list(NA, NA, NA)
+	dyad <- rep(list(NA),length(dyad_name))
 	names(dyad) <- dyad_name
 	DYAD <- lapply(times, function(t) dyad)
 	names(DYAD) <- times
@@ -80,13 +80,14 @@ DYADmaker1 <- compiler::cmpfun( function(
 		d_df_t  <- d_df2[ rowids, ]
 	
 		## Filling Up Dyadic Table, 	
-		#message("fill table")
+		## message("fill table")
 		if( nrow(d_df_t) > 0) {
 			for(i in 1:nrow(d_df_t) ){
 				#i<-178
 				b1x  <- d_df[d_df[,d_df_names ] == d_df_t[,d_df_aggnames1 ][[i]], d_df_id]
 				b2y  <- d_df[d_df[,d_df_names ] == d_df_t[,d_df_aggnames2 ][[i]], d_df_id]
-				s    <- sum( identical(b1x, integer(0)), identical(b2y, integer(0)) ) + sum( is.na(b1x), is.na(b2y) )
+				s    <- sum( identical(b1x, integer(0)),
+				    identical(b2y, integer(0)) ) + sum( is.na(b1x), is.na(b2y) )
 				#print(c(b1x, b2y))
 				if(s <= 0){
 					MM1x <- sapply( b1x, grep, d_tabx)
@@ -113,8 +114,6 @@ DYADmaker1 <- compiler::cmpfun( function(
 	}
 	return(dyad)
 })
-
-
 #------------------------------------------------------------------
 ##################
 #' Dyad List Formatting

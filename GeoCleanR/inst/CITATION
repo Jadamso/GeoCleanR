@@ -8,6 +8,6 @@ bibentry(bibtype = "Manual",
                          role = c("aut", "cre"),
                          email = "jordan.m.adamson@gmail.com"),
          year = "2017",
-         month = "11",
+         month = "12",
          note = "R package version 0.1.1",
          url = "https://sites.google.com/a/g.clemson.edu/ja-resources")

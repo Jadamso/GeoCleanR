@@ -9,8 +9,8 @@ Depends: R (>= 3.4.1)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Published: 2017-11-25
-Date: 2017-11-25
+Published: 2017-12-18
+Date: 2017-12-18
 URL: https://sites.google.com/a/g.clemson.edu/ja-resources
 RoxygenNote: 6.0.1
 Imports: raster,
