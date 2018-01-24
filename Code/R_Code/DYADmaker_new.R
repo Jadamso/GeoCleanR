@@ -83,7 +83,6 @@ dyad.maker1 <- compiler::cmpfun( function(
 		## Filling Up Dyadic Table, 	
 		if( nrow(d_df_t) > 0) {
 			for(i in 1:nrow(d_df_t) ){
-				#i<-178
 				ddd  <- d_df[,d_df_names ] 
 				b1x  <- d_df[ ddd == d_df_t[,d_df_aggnames1 ][[i]], d_df_id]
 				b2y  <- d_df[ ddd == d_df_t[,d_df_aggnames2 ][[i]], d_df_id]

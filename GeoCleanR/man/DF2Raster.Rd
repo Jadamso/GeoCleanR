@@ -2,10 +2,19 @@
 % Please edit documentation in R/DF2Raster.R
 \name{DF2Raster}
 \alias{DF2Raster}
-\title{rdname DF2stack}
+\title{Formatting dataframe as rasterstack}
 \usage{
-DF2Raster(DF, dfname)
+DF2Raster(DF)
+}
+\arguments{
+\item{DF}{dataframe}
+}
+\value{
+rasterstack
 }
 \description{
-rdname DF2stack
+Formatting dataframe as rasterstack
+}
+\seealso{
+DF2stack
 }

@@ -9,14 +9,14 @@
 #' @return rasterstack
 # @examples
 #' @export
-
+#' @seealso DF2Raster
 
 DF2stack <- compiler::cmpfun( function(
-    DF,
-    dfname){
+    DF, dfname){
 
     sp::coordinates(DF) <- ~x+y
     sp::gridded(DF)     <- TRUE
+    
     DF <- raster::stack(DF[dfname])
 
     return(DF)
@@ -26,7 +26,37 @@ DF2stack <- compiler::cmpfun( function(
 
 #' rdname DF2stack
 #' @export
-DF2Raster <- DF2stack
+df2stack <- DF2stack
+
+
+#------------------------------------------------------------------
+##################
+#' Formatting dataframe as rasterstack
+################## 
+#'
+#' @param DF dataframe
+#'
+#' @return rasterstack
+# @examples
+#' @export
+#' @seealso DF2stack
+
+DF2Raster <- compiler::cmpfun( function(DF){
+
+    sp::coordinates(DF) <- ~x+y
+    sp::gridded(DF)     <- TRUE
+    
+    DF <- raster::raster(DF)
+
+    return(DF)
+    
+})
+
+
+#' rdname DF2Raster
+#' @export
+df2raster <- DF2Raster
+
 
 #------------------------------------------------------------------
 ##################

@@ -17,3 +17,6 @@ rasterstack
 \description{
 Formatting dataframe as rasterstack
 }
+\seealso{
+DF2Raster
+}

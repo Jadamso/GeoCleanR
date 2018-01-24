@@ -27,7 +27,7 @@ source('/home/Jadamso/Desktop/Common/R_Code/RCheats.R')
 wideScreen() 
 
 [38;5;11m     USER INFORMATION: [0m
-Jordan Adamson, 2017-12-18
+Jordan Adamson, 2018-01-24
 
 > #-------------------------------------------------------------------
 > ##################
@@ -65,21 +65,21 @@ Depends: R (>= 3.4.1)
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-Published: 2017-12-18
-Date: 2017-12-18
+Published: 2018-01-24
+Date: 2018-01-24
 URL: https://sites.google.com/a/g.clemson.edu/ja-resources
 
 To cite package 'GeoCleanR' in publications use:
 
-  Jordan Adamson (2017). GeoCleanR: GeoCleanR. R package version 0.1.1.
+  Jordan Adamson (2018). GeoCleanR: GeoCleanR. R package version 0.1.1.
 
 A BibTeX entry for LaTeX users is
 
   @Manual{GeoCleanR,
     title = {{GeoCleanR}: GeoCleanR},
     author = {'Jordan Adamson'},
-    year = {2017},
-    month = {12},
+    year = {2018},
+    month = {1},
     note = {R package version 0.1.1},
     url = {https://sites.google.com/a/g.clemson.edu/ja-resources},
   }
@@ -117,10 +117,10 @@ _R_CHECK_CRAN_INCOMING_           : FALSE
 _R_CHECK_FORCE_SUGGESTS_          : FALSE
 Checking GeoCleanR ------------------------------------------------------------
 '/home/Jadamso/lib64/R/bin/R' --no-site-file --no-environ --no-save  \
-  --no-restore --quiet CMD check '/tmp/Rtmpf30BXn/GeoCleanR_0.1.1.tar.gz'  \
+  --no-restore --quiet CMD check '/tmp/Rtmp1h9pLL/GeoCleanR_0.1.1.tar.gz'  \
   --as-cran --timings --no-manual 
 
-* using log directory ‘/tmp/Rtmpf30BXn/GeoCleanR.Rcheck’
+* using log directory ‘/tmp/Rtmp1h9pLL/GeoCleanR.Rcheck’
 * using R version 3.4.1 (2017-06-30)
 * using platform: x86_64-pc-linux-gnu (64-bit)
 * using session charset: UTF-8
@@ -196,7 +196,9 @@ Writing NAMESPACE
 Writing COUNTIESm.Rd
 Writing create_counties.Rd
 Writing DF2stack.Rd
+Writing df2stack.Rd
 Writing DF2Raster.Rd
+Writing df2raster.Rd
 Writing quickdf.Rd
 Writing DYADmaker0.Rd
 Writing DYADmaker1.Rd
