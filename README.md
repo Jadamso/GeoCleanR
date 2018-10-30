@@ -7,9 +7,11 @@ For applications, see my [dissertation](https://sites.google.com/a/g.clemson.edu
 ## To install latest release from Github:
 
 ```r
+
 #install.packages("devtools")
 devtools::install_github("Jadamso/GeoCleanR",subdir="GeoCleanR")
 citation("GeoCleanR")
+
 ```
 
 ## Caveat Emptor
