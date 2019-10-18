@@ -1,19 +1,24 @@
 Package: GeoCleanR
-Title: GeoCleanR
-Version: 0.1.1
-Authors@R: person("Jordan", "Adamson",
-        email="jordan.m.adamson@gmail.com",
-        role=c("aut","cre"))
-Description: Functions and Packages to Process Geospatial Data in R. See my website <https://sites.google.com/a/g.clemson.edu/ja-resources>. or github <https://github.com/Jadamso>.
-Depends: R (>= 3.4.1)
+Title: Functions and Packages to Process Geospatial Data in
+    R.
+Version: 0.1.2
+Date: 2019-10-17
+Authors@R: 
+    person(given = "Jordan",
+           family = "Adamson",
+           role = c("aut", "cre"),
+           email = "jordan.m.adamson@gmail.com")
+Author: Jordan Adamson [aut, cre]
+Maintainer: Jordan Adamson <jordan.m.adamson@gmail.com>
+Description: 
 License: MIT + file LICENSE
+URL: <https://github.com/Jadamso/GeoCleanR>
 Encoding: UTF-8
 LazyData: true
-Published: 2018-03-23
-Date: 2018-03-23
-URL: https://sites.google.com/a/g.clemson.edu/ja-resources
-RoxygenNote: 6.0.1
-Imports: raster,
+Published: 2019-10-17
+Roxygen: list(markdown = TRUE)
+Imports: 
+    raster,
     sp,
     rgeos,
     rgdal,
@@ -23,3 +28,4 @@ Imports: raster,
     gdalUtils,
     fields,
     cleangeo
+RoxygenNote: 6.1.1

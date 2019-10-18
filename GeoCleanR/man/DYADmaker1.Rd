@@ -5,8 +5,8 @@
 \title{Make A list of dyads}
 \usage{
 DYADmaker1(dyad, d_times, t_span, d_df, d_df_var, d_df_id, d_df_names,
-  d_df_aggnames1, d_df_aggnames2, d_df2, d_df2_names, d_tab = NULL, d_tabx,
-  d_taby)
+  d_df_aggnames1, d_df_aggnames2, d_df2, d_df2_names, d_tab = NULL,
+  d_tabx, d_taby)
 }
 \arguments{
 \item{dyad}{, empty list from DYADmaker0 to be filled}

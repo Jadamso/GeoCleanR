@@ -5,18 +5,21 @@
 \alias{extract_closest}
 \title{Spatial Points/Polygon Extract Closest from Raster}
 \usage{
-ExtractClosest(rast, spdf, ncore = 24, setvals = FALSE)
+ExtractClosest(rast, spdf, ncore = 24, setvals = FALSE,
+  returnlist = FALSE)
 
 extract_closest(rast, spdf, ncore = 24, setvals = FALSE)
 }
 \arguments{
 \item{rast}{A raster}
 
-\item{spdf}{A SpatialPoints or SpatialPointsDataFrame}
+\item{spdf}{A SpatialPoints, SpatialPointsDataFrame, Matrix or Dataframe of coordinates}
 
 \item{ncore}{the size of the window used in the neighbourhood calculations}
 
 \item{setvals}{set raster values to extract}
+
+\item{returnlist}{return a list (defaults to vector)}
 }
 \value{
 A list with raster values for each spatial point
@@ -27,7 +30,7 @@ Spatial Points/Polygon Extract Closest from Raster
 Wrapper for Extract Closest
 }
 \details{
-Extract Closest non-NA Raster Values to Spatial Points in parallel
+Extract Closest non-NA Raster Values to Spatial Points in parallel. Use returnlist to return a list when the nearest raster locations are not unique
 
 library(raster)
 xy  <- cbind(x=seq(-1,2,by=.1), y=seq(2,-1,by=-.1) )
