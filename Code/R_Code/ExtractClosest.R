@@ -6,13 +6,14 @@
 #
 #'
 #' @param rast A raster
-#' @param spdf A SpatialPoints or SpatialPointsDataFrame
+#' @param spdf A SpatialPoints, SpatialPointsDataFrame, Matrix or Dataframe of coordinates
 #' @param ncore the size of the window used in the neighbourhood calculations
 #' @param setvals set raster values to extract
+#' @param returnvec return a list (defaults to vector)
 #'
 #' @return A list with raster values for each spatial point
 #'
-#' @details Extract Closest non-NA Raster Values to Spatial Points in parallel
+#' @details Extract Closest non-NA Raster Values to Spatial Points in parallel. Use returnlist to return a list when the nearest raster locations are not unique
 #'
 # @examples
 #' library(raster)
@@ -28,7 +29,8 @@ ExtractClosest <- compiler::cmpfun( function(
     rast,
     spdf,
     ncore=24,
-    setvals=FALSE) { 
+    setvals=FALSE,
+    returnvec=TRUE) { 
     
 	requireNamespace("raster")
 	requireNamespace("parallel")
@@ -57,7 +59,11 @@ ExtractClosest <- compiler::cmpfun( function(
 		    rast@data@values[ raster::which.min( rast_val_i ) ] 
 	})
 	
-	return(unlist(rast_vals))
+	if(returnvec){
+	    return(unlist(rast_vals))
+	} else {
+	    return( rast_vals)
+	}
 })
 
 

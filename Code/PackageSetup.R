@@ -20,7 +20,7 @@ options(devtools.name="Jordan Adamson",
 # Package Description
 ################## 
 
-Title <-  'Functions and Packages to Process Geospatial Data in R.'
+Title <-  'Functions and Packages to Process Geospatial Data in R'
 Description <- ' '
 #This projects adheres to semantic versioning <http://semver.org/>
 
@@ -44,6 +44,8 @@ my_description <- list(
         role=c("aut","cre"))'
 )
 options(devtools.desc=my_description)
+
+usethis::use_description()
 #------------------------------------------------------------------
 ##################
 # Create Package
@@ -52,8 +54,7 @@ options(devtools.desc=my_description)
 ## install.packages(sinew)
 
 # license warning goes away with next code block
-package.setup.safe(packg, check=F)
-
+#package.setup.safe(packg, check=F)
 
 rdir    <- paste0(packg, "/R")
 ddir    <- paste0(packg, "/data/")
@@ -96,14 +97,16 @@ writeLines(
     paste(format(bibref, "R"),
     collapse = "\n\n"),
     con=paste0(idir, "/CITATION"))
+#usethis::use_citation()
 #------------------------------------------------------------------
 ##################
 # License
 ################## 
 
-options( devtools.desc.license='MIT + file LICENSE' )
-usethis::proj_activate(packg)
+#options( devtools.desc.license='MIT + file LICENSE' )
+
 usethis::use_mit_license(packg)
+
 #writeLines( c( paste0("YEAR: ", year), "COPYRIGHT HOLDER: Jordan Adamson"), con=paste0( packg, "/LICENSE") )
 
-package.setup.safe(packg, check=T)
+#package.setup.safe(packg, check=T)

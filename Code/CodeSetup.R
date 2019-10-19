@@ -7,7 +7,7 @@
 rfiles <- c("raster", "sp", "rgeos", "rgdal", "maptools",
     "spam", "spam64", "gdalUtils", "fields", "cleangeo")
 for( i in rfiles) {
-    devtools::use_package( i, pkg=packg)
+    usethis::use_package( i)
 }
 
 # devtools::use_package( i, "Suggests", pkg=pdir)}
@@ -23,7 +23,7 @@ for( i in rfiles) {
 proj.m <- "+proj=moll +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"
 proj.w <- "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0"
 
-devtools::use_data(proj.m, proj.w, overwrite=T, pkg=packg)
+usethis::use_data(proj.m, proj.w)
 
 #-------------------------------------------------------------------
 ##################
