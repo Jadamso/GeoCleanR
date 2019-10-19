@@ -1,8 +1,7 @@
 Package: GeoCleanR
-Title: Functions and Packages to Process Geospatial Data in
-    R.
+Title: Functions and Packages to Process Geospatial Data in R
 Version: 0.1.2
-Date: 2019-10-17
+Date: 2019-10-18
 Authors@R: 
     person(given = "Jordan",
            family = "Adamson",
@@ -15,7 +14,7 @@ License: MIT + file LICENSE
 URL: <https://github.com/Jadamso/GeoCleanR>
 Encoding: UTF-8
 LazyData: true
-Published: 2019-10-17
+Published: 2019-10-18
 Roxygen: list(markdown = TRUE)
 Imports: 
     raster,

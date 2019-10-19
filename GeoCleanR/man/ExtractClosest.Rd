@@ -6,7 +6,7 @@
 \title{Spatial Points/Polygon Extract Closest from Raster}
 \usage{
 ExtractClosest(rast, spdf, ncore = 24, setvals = FALSE,
-  returnlist = FALSE)
+  returnvec = TRUE)
 
 extract_closest(rast, spdf, ncore = 24, setvals = FALSE)
 }
@@ -19,7 +19,7 @@ extract_closest(rast, spdf, ncore = 24, setvals = FALSE)
 
 \item{setvals}{set raster values to extract}
 
-\item{returnlist}{return a list (defaults to vector)}
+\item{returnvec}{return a list (defaults to vector)}
 }
 \value{
 A list with raster values for each spatial point
