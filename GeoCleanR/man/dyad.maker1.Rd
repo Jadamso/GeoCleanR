@@ -4,9 +4,21 @@
 \alias{dyad.maker1}
 \title{Make A list of dyads}
 \usage{
-dyad.maker1(dyad, d_times, t_span, d_df, d_df_id, d_df_names, d_df2,
-  d_df2_names, d_df2_aggnames1, d_df2_aggnames2, d_tab = NULL, d_tabx,
-  d_taby)
+dyad.maker1(
+  dyad,
+  d_times,
+  t_span,
+  d_df,
+  d_df_id,
+  d_df_names,
+  d_df2,
+  d_df2_names,
+  d_df2_aggnames1,
+  d_df2_aggnames2,
+  d_tab = NULL,
+  d_tabx,
+  d_taby
+)
 }
 \arguments{
 \item{dyad}{, empty list from DYADmaker0 to be filled}

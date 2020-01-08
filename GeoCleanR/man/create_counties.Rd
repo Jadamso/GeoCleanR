@@ -4,8 +4,13 @@
 \alias{create_counties}
 \title{Wrapper Functions for County Shapefiles}
 \usage{
-create_counties(hyears = c(1980, 1990, 2000), mmyears = 2008:2010,
-  myears = 2011:2015, ddir, rdir)
+create_counties(
+  hyears = c(1980, 1990, 2000),
+  mmyears = 2008:2010,
+  myears = 2011:2015,
+  ddir,
+  rdir
+)
 }
 \arguments{
 \item{hyears, myears, mmyears}{vectors of years}

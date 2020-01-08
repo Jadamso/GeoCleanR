@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright (c) 2019 /home/Jadamso2/Desktop/Packages/GeoCleanR/GeoCleanR
+Copyright (c) 2020 /home/Jadamso2/Desktop/Packages/GeoCleanR/GeoCleanR
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

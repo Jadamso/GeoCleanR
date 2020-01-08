@@ -4,8 +4,7 @@
 \alias{download.shapefile}
 \title{Download Shapefiles}
 \usage{
-download.shapefile(shape_url, layer, outdir = getwd(),
-  layer_new = layer)
+download.shapefile(shape_url, layer, outdir = getwd(), layer_new = layer)
 }
 \arguments{
 \item{shape_url}{the directory containing the shape files (.shp, .shx, ...)}
