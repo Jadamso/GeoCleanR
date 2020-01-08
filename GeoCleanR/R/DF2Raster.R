@@ -53,7 +53,7 @@ DF2Raster <- compiler::cmpfun( function(DF){
 })
 
 
-#' rdname DF2Raster
+#' @rdname DF2Raster
 #' @export
 df2raster <- DF2Raster
 

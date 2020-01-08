@@ -2,9 +2,12 @@
 % Please edit documentation in R/Raster2DF.R
 \name{stack2df}
 \alias{stack2df}
+\alias{Raster2DF}
 \title{Transform RasterStack into DataFrame}
 \usage{
 stack2df(Rstack)
+
+Raster2DF(Rstack)
 }
 \arguments{
 \item{Rstack}{stack of rasters}
