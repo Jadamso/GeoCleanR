@@ -16,7 +16,7 @@ pack  <- "GeoCleanR"
 pdir  <- paste0(pmdir, pack,"/")
 packg <- paste0(pdir, pack)
 
-Version <- numeric_version("0.1.2")
+Version <- numeric_version("0.1.3")
 
 usethis::create_package(packg)
 
@@ -31,7 +31,7 @@ source(paste0(pdir,"Code/CodeSetup.R") )
 devtools::build(pkg=packg, manual=TRUE)
 
 system( paste0('R CMD Rd2pdf ', packg) )
-#devtools::check_built(manual=TRUE, path=packg)
+# devtools::check_built(manual=TRUE, path=packg)
 
 #-------------------------------------------------------------------
 ##################

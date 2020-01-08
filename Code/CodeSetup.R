@@ -40,7 +40,8 @@ rfile <- c(
     "DF2Raster.R",
     "Raster2DF.R",
     "RasterMisc.R",
-    "CountyCleaner.R"
+    "CountyCleaner.R",
+    "HHI.R"
 )
 
 rfiles <- paste0(pdir,"Code/R_Code/",rfile)
